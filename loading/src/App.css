@@ -24,7 +24,7 @@
   justify-content: center;
   height: 100%;
   background-color: black;
-  opacity: 0.6;
+  opacity: 0.8;
 
 
 } 
@@ -47,7 +47,7 @@ button {
   display: flex;
 }
 
-.st6 {
+.st6, .st7, .st8, .st9, .st10 {
   fill: whitesmoke;
   /* display: none; */
 }

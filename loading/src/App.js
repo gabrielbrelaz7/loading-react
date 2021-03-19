@@ -13,7 +13,7 @@ function App() {
 
         setTimeout(() => {
 
-            if ( isActive && time <= 5) {
+            if ( isActive && time <= 6) {
 
                 setTime(time + 1)
                 loadingStyle()
@@ -25,54 +25,51 @@ function App() {
                         .fill = 'white'
                 }
             }
-        }, 100)
+        }, 140)
 
     }, [isActive,time])
 
     function loadingStyle() {
 
-        if (time === 5) {
+        if (time === 6) {
 
             setTime(0);
 
         } else {
 
-            if (document.querySelector(`.st${time}`)) {
+         if (document.querySelector(`.st${time}`)) {
 
-                document
-                    .querySelector(`.st0`)
-                    .style
-                    .fill = '#A1CE5A'
-                document
-                    .querySelector(`.st1`)
-                    .style
-                    .fill = '#C4D82E'
-                document
-                    .querySelector(`.st2`)
-                    .style
-                    .fill = '#2CB34A'
-                document
-                    .querySelector(`.st3`)
-                    .style
-                    .fill = '#015DAB'
-                document
-                    .querySelector(`.st4`)
-                    .style
-                    .fill = '#288DCC'
-                document
-                    .querySelector(`.st5`)
-                    .style
-                    .fill = '#70ACDE'
-            }
+            document
+                .querySelector(`.st0`)
+                .style
+                .fill = '#A1CE5A'
+            document
+                .querySelector(`.st1`)
+                .style
+                .fill = '#C4D82E'
+            document
+                .querySelector(`.st2`)
+                .style
+                .fill = '#2CB34A'
+            document
+                .querySelector(`.st3`)
+                .style
+                .fill = '#015DAB'
+            document
+                .querySelector(`.st4`)
+                .style
+                .fill = '#288DCC'
+            document
+                .querySelector(`.st5`)
+                .style
+                .fill = '#70ACDE'
         }
-
-        
+    }
 
         return isActive
             ? (
 
                 <> 
-                    {/* <header className = "App-header" >  */}
                     <div className="image">
                         <div className="container">
                             <Loading/>
@@ -80,7 +77,6 @@ function App() {
                             <button onClick={closeLoading}>Disable Loading</button>
                         </div>
                     </div>
-                    {/* </header> */}
                 </>
 
             )
@@ -100,17 +96,7 @@ function App() {
         }
 
 
-        return (
-        
-        <> 
-        
-        {
-            loadingStyle()
-        } 
-        
-        </>
-        
-        );
+        return (<> { loadingStyle() } </>);
     }
 
 export default App;
