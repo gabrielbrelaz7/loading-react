@@ -3,15 +3,6 @@
 }
 
 
- .App-header {
-  background-color: transparent;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-} 
-
 .container {
 
   min-height: 100vh;
@@ -25,7 +16,6 @@
   height: 100%;
   background-color: black;
   opacity: 0.8;
-
 
 } 
 
@@ -53,8 +43,9 @@ button {
 }
 
 /* svg#layer {
-  height: 270px;
+  height: 600px;
   padding: 19px;
+  box-shadow: inset;
 } */
 
 
